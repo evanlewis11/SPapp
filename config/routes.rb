@@ -5,7 +5,7 @@ SPapp::Application.routes.draw do
   get "sessions/new", :as => "new_session"
   post "sessions/create", :as => "sessions"
 
-  get "logout" => 'sessions#destroy', as: :logout
+  get "logout" => 'sessions#destroy', :as: => "logout"
   
   get "vendors/new", :controller => "vendors", :action => "new", :as => "new_vendor"
   get "vendors", :controller => "vendors", :action => "index", :as => "vendors"

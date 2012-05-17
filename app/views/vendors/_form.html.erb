@@ -1,0 +1,20 @@
+<%= form_for(@vendor) do |form| %>
+
+  <div>
+  <%= form.label :name, "Name:" %>
+  <%= form.text_field :name %>
+  </div>
+  
+  <div>
+  <%= form.label :bio, "Bio:" %>
+  <%= form.text_field :bio %>
+  </div>
+
+  <div>
+  <%= form.label :genre, "Content Genre" %>
+  <%= form.text_field :genre %>
+  </div>
+  
+  <%= form.submit %>
+
+<% end %>

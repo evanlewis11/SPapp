@@ -1,0 +1,17 @@
+<h2>Vendor Login</h2>
+
+<%= form_tag sessions_url do || %>
+<p>
+  <%= label_tag :login %>
+  <%= text_field_tag :login %>
+</p>
+<p>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+</p>
+
+  <%= submit_tag "Sign In!" %>
+
+<% end %>
+
+<p>Not Registered? - <%= link_to "Sign Up", new_vendor_url %></p>

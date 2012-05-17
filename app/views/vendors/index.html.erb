@@ -1,0 +1,26 @@
+<h1>Browse Streams...</h1>
+
+<table>
+	
+	<thead>
+		<tr>
+			<th>Vendor</th>
+			<th>Genre</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<% @vendors.each do |vendor| %>
+		<tr>
+				<td>
+					<a href="/vendors/<%= vendor.id %>"><%= vendor.name %></a>
+				</td>
+			<td><%= vendor.genre %></td>
+		</tr>	
+			<% end %>
+
+	</tbody>
+	
+</table>
+
+			

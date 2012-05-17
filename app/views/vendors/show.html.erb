@@ -1,0 +1,15 @@
+<h1><%= @vendor.name %></h1>
+
+<%= @vendor.bio %>
+
+<% @passes.each do |pass| %>
+
+
+<ul>
+	<h2><%= pass.title %></h2>
+	<li><%= pass.description %></li>
+	<li><%= pass.availability_date %></li>
+</ul>
+
+<% end %>
+

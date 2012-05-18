@@ -11,12 +11,12 @@ class SessionsController < ApplicationController
     end
 
     def create
-      vendor = Vendor.find_by_login(params[:login])
+      vendor = Vendor.find_by_login(params[:email])
 
       if vendor
-        if vendor.password == params[:password]
-          session[:login_id] = user.id
-          redirect_to vendor_edit_url, notice: "Hello, #{user.login}"
+        if vendor.authenticate(params[:password])
+          session[:login_id] = vendor.id
+          redirect_to vendor_edit_url, notice: "Hello, #{vendor.login}"
         else
           redirect_to sessions_url, notice: "Bad password!"
         end

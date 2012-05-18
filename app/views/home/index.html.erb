@@ -14,7 +14,7 @@
     </div>
     
     <div class="homesignup">
-      
+      <%= flash[:alert] %>
       <h3>Get Started - Create Your Vendor Account!</h3> 
       
       <%= form_for(@vendor) do |form| %>
@@ -30,8 +30,13 @@
         </div>
 
         <div>
-        <%= form.label :password_digest, "Password:" %>
-        <%= form.text_field :password_digest %>
+        <%= form.label :password, "Password:" %>
+        <%= form.password_field :password %>
+        </div>
+
+		<div>
+        <%= form.label :password_confirmation, "Password:" %>
+        <%= form.password_field :password_confirmation %>
         </div>
         
         <div>

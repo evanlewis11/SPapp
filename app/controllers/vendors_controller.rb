@@ -7,28 +7,34 @@ class VendorsController < ApplicationController
   def create
     @vendor = Vendor.new
     @vendor.email = params[:vendor][:email]
-    @vendor.password_digest = params[:vendor][:password_digest]
+    @vendor.password = params[:vendor][:password]
     
     if @vendor.save
       flash[:notice] = "Vendor account created!"
-      redirect_to vendors_url
+      redirect_to vendor_url(Vendor.find(@vendor.id))
     else
       flash[:alert] = "There was a problem."
-      render new_vendor_url
+      redirect_to root_url
     end
   end
 
   def update
-    @vendor = Vendor.new
     @vendor = Vendor.find_by_id(params[:id])
-    @vendor.email = params[:vendor][:email]
-    @vendor.password_digest = params[:vendor][:password_digest]
-
-    if @vendor.is_data_ok?
-      @vendor.save
-    else
-      flash[:alert] = "Something is wrong with your data!"
+    respond_to do |format|
+      if @vendor.update_attributes(params[:vendor])
+        format.html { redirect_to @vendor, notice: 'Profile was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @endor.errors, status: :unprocessable_entity }
+      end
     end
+
+    # @vendor.email = params[:vendor][:email]
+    # @vendor.name = params[:vendor][:name]
+    # @vendor.description = params[:vendor][:description]
+    # @vendor.save
+
   end
 
   def index

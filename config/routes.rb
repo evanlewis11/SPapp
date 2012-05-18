@@ -5,17 +5,16 @@ SPapp::Application.routes.draw do
   get "sessions/new", :as => "new_session"
   post "sessions/create", :as => "sessions"
 
-  get "logout" => 'sessions#destroy', :as: => "logout"
+  get "logout" => 'sessions#destroy', :as => "logout"
   
-  get "vendors/new", :controller => "vendors", :action => "new", :as => "new_vendor"
-  get "vendors", :controller => "vendors", :action => "index", :as => "vendors"
+  get "vendors/new", :controller => "vendors", :action => "new", :as => :new_vendor
+  get "vendors", :controller => "vendors", :action => "index", :as => :vendors
   post "vendors", :controller => "vendors", :action => "create"
-  
-  get "vendors/:id", :controller => "vendors", :action => "show", :as => "vendor"
+  get "vendors/:id", :controller => "vendors", :action => "show", :as => :vendor
   put "vendors/:id", :controller => "vendors", :action => "update"
+  get "vendors/:id/edit", :controller => "vendors", :action => "edit", :as => :vendor_edit
   
-  get "vendors/:id/edit", :controller => "vendors", :action => "edit", :as => "vendor_edit"
-  
+  get "passes", :controller => "passes", :action => "index", :as => :passes
   end
 
   # get "vendor/new"

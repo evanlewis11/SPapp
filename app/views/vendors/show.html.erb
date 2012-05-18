@@ -1,15 +1,27 @@
 <h1><%= @vendor.name %></h1>
 
-<%= @vendor.bio %>
+<%= link_to 'Edit', vendor_edit_path(@vendor) %>
+<div>
+<b>Name:</b> <%= @vendor.name %>
 
+</div>
+<div>
+<b>Email:</b> <%= @vendor.email %>
+
+</div>
+<div>
+<b>Description:</b> <%= @vendor.description %>
+
+</div>
+
+<div>
+<b>Passes:</b>
 <% @passes.each do |pass| %>
-
-
 <ul>
 	<h2><%= pass.title %></h2>
 	<li><%= pass.description %></li>
 	<li><%= pass.availability_date %></li>
 </ul>
-
+</div>
 <% end %>
 

@@ -1,13 +1,95 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
-*/
+header {
+	height: 40px;
+	width: 1260px;
+	margin: 0 auto;
+/*	background: -webkit-linear-gradient(top, #8A99A6, #EDEDED);*/
+	background: url('dark_dotted.png') repeat;
+	box-shadow: 0px 1px 1px black;
+}
+
+header h1 {
+	float: left;
+	font-size: 22px;
+	line-height: 15px;
+	font-weight: 300;
+	color: #FFECCC;
+	font-variant: small-caps;
+	margin-left: 13%;
+	margin-right: 30px;
+	text-shadow: 0px 0px 1px white;
+/*	font-family: 'Cantata One', serif;*/
+}
+
+header h1 a {
+	text-decoration: none;
+	color: #FFECCC;
+}
+
+header span {
+	color: #E8D673;
+	text-shadow: 0px 0px 2px white;
+}
+
+header h1 a:hover , header h1 a:hover span {
+	color: white;
+	text-shadow: 0px 0px 3px #E8D673;
+}
+
+header ul li {
+	float: left;
+	font-size: 12px;
+	font-variant: small-caps;
+	text-decoration: none;
+	font-weight: 300;
+	display: inline;
+	padding-left: 30px;
+	padding-top: 14px;
+	color: #E8D673;
+	text-shadow: 0px 0px 2px white;
+}
+
+header ul li a {
+	text-decoration: none;
+	color: #E8D673;
+}
+
+header ul li a:hover {
+	color: white;
+	text-shadow: 0px 0px 2px #E8D673;
+}
+
+body {
+	background: url('denim.png') repeat;
+}
+
+.container {
+	width: 960px;
+	height: 510px;
+	margin: 5px auto;
+	padding: 10px;
+	background: white;
+	box-shadow: 0px 0px 5px black;
+	opacity: 0.85;
+}
+
+.lefthalf {
+	background: url('furley_bg.png') repeat;
+	float: left;
+	width: 920px;
+	height: 480px;
+	padding: 10px;
+	border-radius: 6px;
+	box-shadow: 1px 1px 2px black;
+	margin: 5px 10px;
+}
+
+/*.righthalf {
+	background: url('farmer.png') repeat;
+	float: left;
+	width: 442px;
+	height: 460px;
+	padding: 10px;
+	border-radius: 6px;
+	box-shadow: 1px -1px 2px black, -1px 0px 1px silver;
+	margin: 15px 5px;
+}*/

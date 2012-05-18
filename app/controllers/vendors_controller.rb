@@ -6,9 +6,8 @@ class VendorsController < ApplicationController
 
   def create
     @vendor = Vendor.new
-    @vendor.name = params[:vendor][:name]
-    @vendor.bio = params[:vendor][:bio]
-    @vendor.genre = params[:vendor][:genre]
+    @vendor.email = params[:vendor][:email]
+    @vendor.password_digest = params[:vendor][:password_digest]
     
     if @vendor.save
       flash[:notice] = "Vendor account created!"
@@ -22,9 +21,8 @@ class VendorsController < ApplicationController
   def update
     @vendor = Vendor.new
     @vendor = Vendor.find_by_id(params[:id])
-    @vendor.name = params[:vendor][:name]
-    @vendor.bio = params[:vendor][:bio]
-    @vendor.genre = params[:vendor][:genre]
+    @vendor.email = params[:vendor][:email]
+    @vendor.password_digest = params[:vendor][:password_digest]
 
     if @vendor.is_data_ok?
       @vendor.save

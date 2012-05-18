@@ -11,10 +11,10 @@ class SessionsController < ApplicationController
     end
 
     def create
-      user = User.find_by_login(params[:login])
+      vendor = Vendor.find_by_login(params[:login])
 
-      if user
-        if user.password == params[:password]
+      if vendor
+        if vendor.password == params[:password]
           session[:login_id] = user.id
           redirect_to vendor_edit_url, notice: "Hello, #{user.login}"
         else

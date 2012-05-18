@@ -1,11 +1,11 @@
-<h1>Browse Streams...</h1>
+<h2>Browse Vendors...</h2>
 
 <table>
 	
 	<thead>
 		<tr>
 			<th>Vendor</th>
-			<th>Genre</th>
+			<th>Content Type</th>
 		</tr>
 	</thead>
 	
@@ -15,7 +15,7 @@
 				<td>
 					<a href="/vendors/<%= vendor.id %>"><%= vendor.name %></a>
 				</td>
-			<td><%= vendor.genre %></td>
+			<td><%= vendor.category_id %></td>
 		</tr>	
 			<% end %>
 

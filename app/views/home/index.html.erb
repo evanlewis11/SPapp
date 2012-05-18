@@ -1,6 +1,46 @@
-<h1>This is the HomePage.</h1>
+ <%= stylesheet_link_tag "home", :media => "all" %>
 
+<div class="lefthalf">
+  
+  <div class="homemessage">
+    <h2>Welcome to StreamPass!</h2> 
+    
+    <p>StreamPasses are virtual tickets that link viewers to the video streams of their choice.</p>
+    
+    <p>If you are looking to be entertained, <a href="/vendors">click here</a><strong> to browse our StreamVendor library!</p></strong>
+    
+    <p>If you have original video content that you want to monetize, <strong>create a vendor account below!</strong></p> 
+      
+    </div>
+    
+    <div class="homesignup">
+      
+      <h3>Get Started - Create Your Vendor Account!</h3> 
+      
+      <%= form_for(@vendor) do |form| %>
 
-<p><%= link_to "Buy Passes", vendors_url %></p>
+        <div>
+        <%= form.label :name, "Name:" %>
+        <%= form.text_field :name %>
+        </div>
 
-<p><%= link_to "Sell Passes", new_session_url %></p>
+        <div>
+        <%= form.label :email, "E-Mail:" %>
+        <%= form.text_field :email %>
+        </div>
+
+        <div>
+        <%= form.label :password_digest, "Password:" %>
+        <%= form.text_field :password_digest %>
+        </div>
+        
+        <div>
+         <%= form.label :category_id, "Content Type:" %>
+         <%= form.collection_select :category_id, Category.all, :id, :name %>
+         </div>
+
+        <%= form.submit %>
+
+      <% end %>
+      
+</div>

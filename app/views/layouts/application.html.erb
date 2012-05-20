@@ -4,7 +4,7 @@
   <title>SPapp</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <!-- <link href='http://fonts.googleapis.com/css?family=Cantata+One' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Chau+Philomene+One' rel='stylesheet' type='text/css'>
    <%= csrf_meta_tags %>
 </head>
 <body>
@@ -17,6 +17,32 @@
 	    <li><a href="/vendors">Browse By Vendor...</a></li>
 	    <li><a href="">Popular Passes</a></li>
     </ul>
+    
+    <% if session[:login_id].present? %>
+      <p>User Account Dropdown</p>
+    <% else %>
+    <div class="login">
+      <ul>
+      <%= form_tag sessions_url do || %>
+      <li>
+        <%= submit_tag "Sign In!" %>
+      </li>
+      
+      <li>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+      </li>
+      
+      <li>
+        <%= label_tag :email %>
+        <%= text_field_tag :email %>
+      </li>
+      </ul>
+    </div>
+
+      <% end %>
+    
+    <% end %>
 	
 	</header>
 	

@@ -6,9 +6,10 @@ class VendorsController < ApplicationController
 
   def create
     @vendor = Vendor.new
+    @vendor.name = params[:vendor][:name]
     @vendor.email = params[:vendor][:email]
     @vendor.password = params[:vendor][:password]
-    
+    @vendor.password = params[:vendor][:category]
     if @vendor.save
       flash[:notice] = "Vendor account created!"
       redirect_to vendor_url(Vendor.find(@vendor.id))

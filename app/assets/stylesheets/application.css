@@ -1,5 +1,5 @@
 header {
-	height: 40px;
+	height: 50px;
 	width: 1260px;
 	margin: 0 auto;
 /*	background: -webkit-linear-gradient(top, #8A99A6, #EDEDED);*/
@@ -10,7 +10,6 @@ header {
 header h1 {
 	float: left;
 	font-size: 22px;
-	line-height: 15px;
 	font-weight: 300;
 	color: #FFECCC;
 	font-variant: small-caps;
@@ -37,13 +36,12 @@ header h1 a:hover , header h1 a:hover span {
 
 header ul li {
 	float: left;
-	font-size: 12px;
-	font-variant: small-caps;
+	font-size: 15px;
 	text-decoration: none;
-	font-weight: 300;
+	font-weight: 100;
 	display: inline;
 	padding-left: 30px;
-	padding-top: 14px;
+	padding-top: 19px;
 	color: #E8D673;
 	text-shadow: 0px 0px 2px white;
 }
@@ -58,7 +56,21 @@ header ul li a:hover {
 	text-shadow: 0px 0px 2px #E8D673;
 }
 
+.login {
+	float: right;
+	margin-right: 160px;
+}
+
+.login ul li {
+	float: right;
+	padding-left: 5px;
+	padding-top: 0px;
+	line-height: 15px;
+	font-size: 13px;
+}
+
 body {
+	clear: both;
 	background: url('denim.png') repeat;
 }
 

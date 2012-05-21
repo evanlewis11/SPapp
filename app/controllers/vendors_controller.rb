@@ -27,7 +27,7 @@ class VendorsController < ApplicationController
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @endor.errors, status: :unprocessable_entity }
+        format.json { render json: @vendor.errors, status: :unprocessable_entity }
       end
     end
 

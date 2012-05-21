@@ -15,11 +15,14 @@
 	<div>
 	  <ul>
 	    <li><a href="/vendors">Browse By Vendor...</a></li>
-	    <li><a href="">Popular Passes</a></li>
+	    <li><%= link_to 'Popular Passes', '/passes' %></li>
     </ul>
     
     <% if session[:login_id].present? %>
-      <p>User Account Dropdown</p>
+      <p class="useracct">
+      <%#= link_to '#{@vendor.name}', vendor_url(@vendor) %>
+      User Logged In. Show Dropdown Here.
+      </p>
     <% else %>
     <div class="login">
       <ul>

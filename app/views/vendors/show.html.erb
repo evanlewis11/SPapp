@@ -1,22 +1,24 @@
 <h1><%= @vendor.name %></h1>
 <%= flash[:notice] %>
-<%= link_to 'Edit', vendor_edit_path(@vendor) %>
+<% if session[:login_id].present? %>
+<p><%= link_to 'Edit', vendor_edit_path(@vendor) %> |
+<%= link_to 'Sign Out', logout_path(@vendor) %></p>
+<% else %>
+<% end %>
 
 <div>
 <b>Name:</b> <%= @vendor.name %>
 
 </div>
+<%= session[:login_id] %>
 <div>
-<b>Email:</b> <%= @vendor.email %>
-
-</div>
-<div>
-<b>Description:</b> <%= @vendor.description %>
-b>Category:</b> <%= @vendor.category_id %>
+<p><b>Description:</b> <%= @vendor.description %></p>
+<p><b>Category:</b> <%= @vendor.category.name %></p>
 </div>
 
 <div>
 <b>Passes:</b>
+
 <% @passes.each do |pass| %>
 <ul>
 	<h2><%= pass.title %></h2>
@@ -24,5 +26,10 @@ b>Category:</b> <%= @vendor.category_id %>
 	<li><%= pass.availability_date %></li>
 </ul>
 </div>
+<% end %>
+
+<% if session[:login_id].present? %>
+<b><%= link_to 'Create A StreamPass!', new_pass_url %></b>
+<% else %>
 <% end %>
 

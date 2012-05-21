@@ -7,3 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 categories = Category.create([ {name: 'Sports'}, {name: 'Education'}, {name: 'Music'} ])
+
+vendors = Vendor.create([ {email: 'evanpatricklewis@gmail.com', password: 'hj8k;cvE', password_confirmation: 'hj8k;cvE', category_id: 19}, {email: 'jlgladf@gmail.com', password: 'qazse21', password_confirmation: 'qazse21', category_id: 20}])

@@ -1,0 +1,13 @@
+<h1>StreamPass Index</h1>
+<p>Available Passes Below:</p>
+
+<% @passes.each do |pass| %>
+
+<div class="pass">
+
+  <p><%= pass.availability_date %></p>
+  <p><%= pass.title %></p>
+  <p><%= pass.description %></p>
+</div>
+
+<% end %>

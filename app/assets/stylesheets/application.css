@@ -69,6 +69,13 @@ header ul li a:hover {
 	font-size: 13px;
 }
 
+.useracct {
+	float: right;
+	margin-right: 13%;
+	color: white;
+	font-size: 15px;
+}
+
 body {
 	clear: both;
 	background: url('denim.png') repeat;
@@ -94,14 +101,3 @@ body {
 	box-shadow: 1px 1px 2px black;
 	margin: 5px 10px;
 }
-
-/*.righthalf {
-	background: url('farmer.png') repeat;
-	float: left;
-	width: 442px;
-	height: 460px;
-	padding: 10px;
-	border-radius: 6px;
-	box-shadow: 1px -1px 2px black, -1px 0px 1px silver;
-	margin: 15px 5px;
-}*/

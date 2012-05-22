@@ -10,25 +10,32 @@
 <b>Name:</b> <%= @vendor.name %>
 
 </div>
-<%= session[:login_id] %>
 <div>
 <p><b>Description:</b> <%= @vendor.description %></p>
 <p><b>Category:</b> <%= @vendor.category.name %></p>
 </div>
 
 <div>
+<b><%= link_to 'Add A StreamPass!', new_pass_url %></b><br /><br />
 <b>Passes:</b>
+<table style="width:60%">
 
-<% @passes.each do |pass| %>
-<ul>
-	<h2><%= pass.title %></h2>
-	<li><%= pass.description %></li>
-</ul>
-</div>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Vendor</th>
+  </tr>
+
+<% @vendor.passes.each do |pass| %>
+  <tr>
+    <td><a href="/passes/<%= pass.id %>"><%= pass.title %>: </a></td>
+  <td><%= pass.description %></td>
+  <td><%= pass.vendor.email %></td>
+  </tr>
 <% end %>
+</table>
 
 <% if session[:login_id].present? %>
-<b><%= link_to 'Create A StreamPass!', new_pass_url %></b>
 <% else %>
 <% end %>
 

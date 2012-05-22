@@ -20,8 +20,8 @@
     
     <% if session[:login_id].present? %>
       <p class="useracct">
-	 <%= link_to "#{Vendor.find(session[:login_id]).email}", vendor_url(Vendor.find(session[:login_id])) %>
-      </p>
+	 <%= link_to "#{Vendor.find(session[:login_id]).email}", vendor_url(Vendor.find(session[:login_id])) %><br />
+     <%= link_to 'Sign Out', logout_path(@vendor) %></p>
     <% else %>
     <div class="login">
       <ul>

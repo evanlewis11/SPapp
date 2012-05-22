@@ -76,6 +76,11 @@ header ul li a:hover {
 	font-size: 15px;
 }
 
+p.useracct a 
+{ 
+color: white; 
+}
+
 body {
 	clear: both;
 	background: url('denim.png') repeat;

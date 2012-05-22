@@ -1,10 +1,10 @@
 <h1>Individual Pass Page</h1>
 
 <div class="pass">
-  <%= @pass.title %>
-	<%= @pass.description %>
-	
+  <b>Title:</b> <%= @pass.title %><br />
+	<b>Description:</b> <%= @pass.description %><br />
+	<br />
 	<%= video_embed_tag(@pass.embed_code).html_safe %>
-	<a href="<%= @pass.embed_code %>"><%= @pass.embed_code %></a>
+
 </div>
 

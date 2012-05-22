@@ -1,6 +1,24 @@
+<%= stylesheet_link_tag "vendor", :media => "all" %>
+
 <h2>Browse Vendors...</h2>
 
-<table>
+<% @categories.each do |category| %>
+
+<div class="categorybox">
+	
+	<div class="categoryname">
+	
+		<h3><%= category.name %></h3>
+		
+	</div>
+	</div>
+
+<% end %>
+
+
+
+
+<!-- <table>
 	
 	<thead>
 		<tr>
@@ -10,17 +28,17 @@
 	</thead>
 	
 	<tbody>
-		<% @vendors.each do |vendor| %>
+		<%# @vendors.each do |vendor| %>
 		<tr>
 				<td>
-					<a href="/vendors/<%= vendor.id %>"><%= vendor.email %></a>
+					<a href="/vendors/<#%= vendor.id %>"><#%= vendor.email %></a>
 				</td>
-			<td><%= vendor.category.name %></td>
+			<td><%#= vendor.category.name %></td>
 		</tr>	
-			<% end %>
+			<#% end %>
 
 	</tbody>
 	
-</table>
+</table> -->
 
 			

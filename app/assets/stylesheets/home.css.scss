@@ -2,6 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.container {
+	position: relative;
+	top: 80px;
+	width: 960px;
+	height: 510px;
+	margin: 5px auto;
+	padding: 10px;
+	background: white;
+	box-shadow: 0px 0px 10px black;
+}
+
+.lefthalf {
+	background: url('furley_bg.png') repeat;
+	float: left;
+	width: 920px;
+	height: 480px;
+	padding: 10px;
+	border-radius: 6px;
+	box-shadow: 1px 1px 2px black;
+	margin: 5px 10px;
+}
 
 .homemessage {
 	margin: 10px auto;

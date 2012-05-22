@@ -1,108 +1,85 @@
+body {
+	background: url('brushed_alu.png') repeat;
+	position: relative;
+}
+
 header {
-	height: 50px;
-	width: 1260px;
-	margin: 0 auto;
-/*	background: -webkit-linear-gradient(top, #8A99A6, #EDEDED);*/
+	position: absolute;
+	top: -10px;
+	height: 80px;
+	width: 100%;
 	background: url('dark_dotted.png') repeat;
-	box-shadow: 0px 1px 1px black;
+	opacity: 0.95;
+/*	box-shadow: 0px 1px 1px black;*/
+	border-bottom: 1px solid #FFECCC;
 }
 
-header h1 {
+.headercontent {
+	width: 960px;
+	margin: 0 auto;
+	color: white;
+}
+
+.headercontent h1 {
 	float: left;
-	font-size: 22px;
+	margin: 5px 20px;
+	font-size: 35px;
 	font-weight: 300;
-	color: #FFECCC;
 	font-variant: small-caps;
-	margin-left: 13%;
-	margin-right: 30px;
-	text-shadow: 0px 0px 1px white;
-/*	font-family: 'Cantata One', serif;*/
 }
 
-header h1 a {
+.headercontent a {
 	text-decoration: none;
+	color: white;
+	text-shadow: 0px 0px 1px yellow;
+}
+
+.headercontent h1 a:hover {
 	color: #FFECCC;
+	text-shadow: 0px 0px 2px yellow;
 }
 
-header span {
-	color: #E8D673;
-	text-shadow: 0px 0px 2px white;
+.headercontent a:hover {
+	color: #FFECCC;
+	text-shadow: 0px 0px 1px yellow;
 }
 
-header h1 a:hover , header h1 a:hover span {
-	color: white;
-	text-shadow: 0px 0px 3px #E8D673;
-}
-
-header ul li {
-	float: left;
-	font-size: 15px;
+.navpanel ul li , .userpanel ul li {
 	text-decoration: none;
-	font-weight: 100;
 	display: inline;
-	padding-left: 30px;
-	padding-top: 19px;
-	color: #E8D673;
-	text-shadow: 0px 0px 2px white;
 }
 
-header ul li a {
-	text-decoration: none;
-	color: #E8D673;
+.navpanel ul li {
+	padding-top: 15px;
+	font-size: 20px;
+	font-variant: small-caps;
+	float: left;
+	padding-left: 40px;
 }
 
-header ul li a:hover {
-	color: white;
-	text-shadow: 0px 0px 2px #E8D673;
-}
-
-.login {
+.userpanel ul li {
 	float: right;
-	margin-right: 160px;
+	font-size: 15px;
+	padding: 18px 12px;
+	list-style: none;
 }
 
 .login ul li {
 	float: right;
+	list-style: none;
 	padding-left: 5px;
-	padding-top: 0px;
-	line-height: 15px;
-	font-size: 13px;
-}
-
-.useracct {
-	float: right;
-	margin-right: 13%;
-	color: white;
+	padding-top: 18px;
 	font-size: 15px;
-}
-
-p.useracct a 
-{ 
-color: white; 
-}
-
-body {
-	clear: both;
-	background: url('denim.png') repeat;
+	text-shadow: 0px 0px 1px yellow;
 }
 
 .container {
+	position: relative;
+	top: 80px;
 	width: 960px;
-	height: 510px;
+	height: 1000px;
 	margin: 5px auto;
 	padding: 10px;
 	background: white;
-	box-shadow: 0px 0px 5px black;
-	opacity: 0.85;
-}
-
-.lefthalf {
-	background: url('furley_bg.png') repeat;
-	float: left;
-	width: 920px;
-	height: 480px;
-	padding: 10px;
-	border-radius: 6px;
-	box-shadow: 1px 1px 2px black;
-	margin: 5px 10px;
+	box-shadow: 0px 0px 10px black;
 }

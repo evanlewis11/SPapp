@@ -10,18 +10,27 @@
 <body>
 
 <header>
-	<h1><a href="/">Stream<span>Pass</span></a></h1>
 	
-	<div>
+	<div class="headercontent">
+	
+	<h1><a href="/">StreamPass</a></h1>
+	
+	<div class="navpanel">
 	  <ul>
-	    <li><a href="/vendors">Browse By Vendor...</a></li>
-	    <li><%= link_to 'Popular Passes', '/passes' %></li>
+	    <li><a href="/vendors">Vendors</a></li>
+			<li>|</li>
+	    <li><%= link_to 'Passes', '/passes' %></li>
     </ul>
-    
+ 	</div>
+
     <% if session[:login_id].present? %>
-      <p class="useracct">
-	 <%= link_to "#{Vendor.find(session[:login_id]).email}", vendor_url(Vendor.find(session[:login_id])) %><br />
-     <%= link_to 'Sign Out', logout_path(@vendor) %></p>
+	<div class="userpanel">
+      <ul>
+	<li><%= link_to 'Sign Out', logout_path(@vendor) %></li>
+	 <li><%= link_to "#{Vendor.find(session[:login_id]).email}", vendor_url(Vendor.find(session[:login_id])) %></li>
+			</ul>
+	</div>
+	</div>
     <% else %>
     <div class="login">
       <ul>
@@ -41,6 +50,7 @@
       </li>
       </ul>
     </div>
+		</div>
 
       <% end %>
     

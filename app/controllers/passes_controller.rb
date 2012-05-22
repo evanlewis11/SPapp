@@ -14,6 +14,7 @@ class PassesController < ApplicationController
   def show
    @pass = Pass.find_by_id(params[:id])
    @passes = Pass.all
+   
   end
 
   def create
@@ -23,6 +24,7 @@ class PassesController < ApplicationController
     @pass.live_stream = params[:pass][:live_stream]
     @pass.availability_date = params[:pass][:availability_date]
     @pass.vendor_id = session[:login_id]
+    @pass.embed_code = params[:pass][:embed_code]
     if @pass.save
       flash[:notice] = "New pass created!"
       redirect_to passes_url

@@ -1,5 +1,6 @@
 <%= stylesheet_link_tag "home", :media => "all" %>
 
+<% if session[:login_id].blank? %>
 <div class="lefthalf">
   
   <div class="homemessage">
@@ -47,5 +48,7 @@
         <%= form.submit %>
 
       <% end %>
-      
+	<% else %>
+	<b><%= link_to 'Already logged in, create A StreamPass!', new_pass_url %></b>
+<% end %>      
 </div>

@@ -20,8 +20,7 @@
     
     <% if session[:login_id].present? %>
       <p class="useracct">
-      <%#= link_to '#{@vendor.name}', vendor_url(@vendor) %>
-      User Logged In. Show Dropdown Here.
+	 <%= link_to "#{Vendor.find(session[:login_id]).email}", vendor_url(Vendor.find(session[:login_id])) %>
       </p>
     <% else %>
     <div class="login">

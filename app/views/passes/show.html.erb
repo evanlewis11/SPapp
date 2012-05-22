@@ -2,6 +2,9 @@
 
 <div class="pass">
   <%= @pass.title %>
-	<%= @pass.title %>
+	<%= @pass.description %>
+	
+	<%= video_embed_tag(@pass.embed_code).html_safe %>
+	<a href="<%= @pass.embed_code %>"><%= @pass.embed_code %></a>
 </div>
 

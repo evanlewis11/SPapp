@@ -9,9 +9,13 @@
 	<div class="categoryname">
 	
 		<h3><%= category.name %></h3>
-		
+			
 	</div>
+	<% category.vendors.each do |vendor| %></h3>
+	<%= vendor.email %>
+	<% end %>
 	</div>
+
 
 <% end %>
 

@@ -4,7 +4,8 @@
   <b>Title:</b> <%= @pass.title %><br />
 	<b>Description:</b> <%= @pass.description %><br />
 	<br />
-	<%= video_embed_tag(@pass.embed_code).html_safe %>
-
+	<%= video_embed_tag(@pass.embed_code).html_safe %><br />
+	<a href="https://twitter.com/share?text=I'm watching <%= @pass.title %> via Streampass. Join me at&url=http://streampass.me" class="twitter-share-button" data-lang="en">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 

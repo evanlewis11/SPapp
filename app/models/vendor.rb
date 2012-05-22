@@ -3,4 +3,5 @@ class Vendor < ActiveRecord::Base
   has_many :passes
   belongs_to :category
   has_secure_password
+
 end

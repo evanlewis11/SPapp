@@ -1,4 +1,5 @@
-<h1><%= @vendor.name %></h1>
+<%= stylesheet_link_tag "vendor", :media => "all" %>
+
 <%= flash[:notice] %>
 <% if session[:login_id].present? %>
 <p><%= link_to 'Edit', vendor_edit_path(@vendor) %> |
@@ -8,34 +9,47 @@
 <div>
 <b>Name:</b> <%= @vendor.name %>
 <a href = "<%= @vendor.avatar.url %>"><b>File attached </b></a>
+<div class="lefthalf"
 
-</div>
-<div>
-<p><b>Description:</b> <%= @vendor.description %></p>
+<img src="http://placehold.it/140&text=vendor+logo+image+here">
+	
+<b>Name:</b> <%= @vendor.name %>
+<p><%= @vendor.category.name %></p>
+
+<p><%= @vendor.description %></p>
 <p><b>Category:</b> <%= @vendor.category.name %></p>
+
 </div>
 
-<div>
-<b><%= link_to 'Add A StreamPass!', new_pass_url %></b><br /><br />
-<b>Passes:</b>
-<table style="width:60%">
+<div class="righthalf">
+	<% if session[:login_id].present? %>
+		<b><%= link_to 'Add A StreamPass!', new_pass_url %></b>
+	<% else %>
+	<% end %>
 
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Vendor</th>
-  </tr>
+<b>Passes:</b>
 
 <% @vendor.passes.each do |pass| %>
-  <tr>
-    <td><a href="/passes/<%= pass.id %>"><%= pass.title %>: </a></td>
-  <td><%= pass.description %></td>
-  <td><%= pass.vendor.email %></td>
-  </tr>
-<% end %>
-</table>
 
-<% if session[:login_id].present? %>
-<% else %>
+<div class="passcontainer">
+	
+	<div class="passcontent">
+	
+    <h4><%= pass.title %></h4>
+  	<p><%= pass.description %></p>
+
+	</div>
+	
+	<div class="buypass">
+		<a href="/passes/<%= pass.id %>"><p>Buy This Pass!</p></a>
+	</div>
+
+</div>
+
 <% end %>
+
+</div>
+
+
+
 

@@ -34,3 +34,51 @@ float: left;
 margin-top: 5px;
 margin-left: 5px;
 }
+
+.lefthalf {
+	float: left;
+	width: 300px;
+}
+
+.righthalf {
+	float: left;
+	width: 600px;
+}
+
+.passcontainer {
+  width: 400px;
+  height: 120px;
+	background: white url('arrow-right.jpeg') 100% no-repeat;
+  font-size: 15px;
+	border: 1px dotted black;
+	margin: 10px auto;
+	padding: 5px;
+}
+
+.passcontent {
+	width: 300px;
+	margin: 1px;
+	float: left;
+}
+
+.passcontent h4 {
+	font-size: 18px;
+	line-height: 19px;
+	margin: 2px 2px;
+	color: green;
+}
+
+.passcontent p {
+	margin: 10px 5px;
+}
+
+.buypass p {
+	float: left;
+	width: 50px;
+	font-size: 15px;
+	border: 1px solid green;
+	border-radius: 6px;
+	text-align: center;
+	margin-top: 35px;
+	margin-left: 15px;
+}

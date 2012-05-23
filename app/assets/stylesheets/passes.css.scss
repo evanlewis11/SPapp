@@ -2,8 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.pass {
-  width: 300px;
-  height: 100px;
+.passcontainer {
+  width: 900px;
+  height: 120px;
+	background: white url('arrow-right.jpeg') 100% no-repeat;
   font-size: 15px;
+	border: 1px dotted black;
+	margin: 10px auto;
+	padding: 5px;
+}
+
+.passcontent {
+	width: 700px;
+	margin: 1px;
+	float: left;
+}
+
+.passcontent p {
+	margin: 5px 5px;
+}
+
+.buypass p {
+	float: left;
+	width: 50px;
+	font-size: 15px;
+	border: 1px solid green;
+	border-radius: 6px;
+	text-align: center;
+	margin-top: 35px;
+	margin-left: 15px;
 }

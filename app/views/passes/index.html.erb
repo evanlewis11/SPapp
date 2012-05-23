@@ -1,13 +1,23 @@
+<%= stylesheet_link_tag "passes", :media => "all" %>
+
 <h1>StreamPass Index</h1>
 <p>Available Passes Below:</p>
 
 <% @passes.each do |pass| %>
 
-<div class="pass">
+<div class="passcontainer">
 	
-    <a href="/passes/<%= pass.id %>"><%= pass.title %>: </a>
-  	<%= pass.description %>
-  	<%= pass.vendor.email %>
+	<div class="passcontent">
+	
+    <p><a href="/passes/<%= pass.id %>"><%= pass.title %></a></p>
+  	<p><%= pass.description %></p>
+  	<p><%= pass.vendor.email %></p>
+
+	</div>
+	
+	<div class="buypass">
+		<p>Buy This Pass!</p>
+	</div>
 
 </div>
 

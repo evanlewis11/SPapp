@@ -3,23 +3,11 @@
 
 <% @passes.each do |pass| %>
 
-<table style="width:60%">
-
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Vendor</th>
-
-  </tr>
-
-<% @passes.each do |pass| %>
-  <tr>
-    <td><a href="/passes/<%= pass.id %>"><%= pass.title %>: </a></td>
-  <td><%= pass.description %></td>
-  <td><%= pass.vendor.email %></td>
-  </tr>
-<% end %>
-</table>
+<div class="pass">
+	
+    <a href="/passes/<%= pass.id %>"><%= pass.title %>: </a>
+  	<%= pass.description %>
+  	<%= pass.vendor.email %>
 
 </div>
 

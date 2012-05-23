@@ -1,23 +1,22 @@
 <%= stylesheet_link_tag "vendor", :media => "all" %>
 
 <%= flash[:notice] %>
+
+<div class="lefthalf">
+
+<img src="http://placehold.it/140&text=vendor+logo+image+here">
+
+<p><%= @vendor.email %></p>
 <% if session[:login_id].present? %>
 <p><%= link_to 'Edit', vendor_edit_path(@vendor) %> |
 <%= link_to 'Sign Out', logout_path(@vendor) %></p>
 <% else %>
 <% end %>
-<div>
-<b>Name:</b> <%= @vendor.name %>
-<a href = "<%= @vendor.avatar.url %>"><b>File attached </b></a>
-<div class="lefthalf"
+<a href ="<%= @vendor.avatar.url %>"><b>File attached</b></a>
 
-<img src="http://placehold.it/140&text=vendor+logo+image+here">
-	
-<b>Name:</b> <%= @vendor.name %>
 <p><%= @vendor.category.name %></p>
 
 <p><%= @vendor.description %></p>
-<p><b>Category:</b> <%= @vendor.category.name %></p>
 
 </div>
 
@@ -26,8 +25,6 @@
 		<b><%= link_to 'Add A StreamPass!', new_pass_url %></b>
 	<% else %>
 	<% end %>
-
-<b>Passes:</b>
 
 <% @vendor.passes.each do |pass| %>
 

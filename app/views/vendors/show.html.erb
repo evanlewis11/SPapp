@@ -5,9 +5,9 @@
 <%= link_to 'Sign Out', logout_path(@vendor) %></p>
 <% else %>
 <% end %>
-
 <div>
 <b>Name:</b> <%= @vendor.name %>
+<a href = "<%= @vendor.avatar.url %>"><b>File attached </b></a>
 
 </div>
 <div>

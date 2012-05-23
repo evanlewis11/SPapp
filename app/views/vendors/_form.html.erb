@@ -1,4 +1,4 @@
-<%= form_for(@vendor) do |form| %>
+<%= form_for @vendor, :url => vendor_path, :html => { :multipart => true } do |form| %>
 
   <div>
   <%= form.label :name, "Name:" %>
@@ -24,6 +24,8 @@
    <%= form.label :category_id, "Content Type:" %>
    <%= form.collection_select :category_id, Category.all, :id, :name %>
    </div>
-
+<div>
+<%= form.file_field :avatar %>
+</div>
   <%= form.submit %>
 <% end %>

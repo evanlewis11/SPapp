@@ -1,11 +1,36 @@
-<h1>Individual Pass Page</h1>
+<%= stylesheet_link_tag "passes", :media => "all" %>
 
 <div class="pass">
-  <b>Title:</b> <%= @pass.title %><br />
-	<b>Description:</b> <%= @pass.description %><br />
-	<br />
-	<%= video_embed_tag(@pass.embed_code).html_safe %><br />
-	<a href="https://twitter.com/share?text=I'm watching <%= @pass.title %> via Streampass. Join me at&url=http://streampass.tv" class="twitter-share-button" data-lang="en">Tweet</a>
+  
+  <h1><%= @pass.title %></h1>
+  
+  <blockquote><%= @pass.description %></blockquote>
+  
+  <div class="video">
+  
+  <%= video_embed_tag(@pass.embed_code).html_safe %>
+  
+  </div>
+  
+  <div class="share">
+    
+  <p>Rate This Video...</p>
+  
+  <input name="star2" type="radio" class="star"/>
+  <input name="star2" type="radio" class="star"/>
+  <input name="star2" type="radio" class="star" checked="checked"/>
+  <input name="star2" type="radio" class="star"/>
+  <input name="star2" type="radio" class="star"/>
+  
+  <a href="https://twitter.com/share?text=I'm watching <%= @pass.title %> via StreamPass. Join me at&url=http://streampass.tv" class="twitter-share-button" data-lang="en">Tweet</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  
+	<a name="fb_share" type="button" share_url="http://streampass.tv"></a>
+	<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" 
+          type="text/javascript">
+  </script>
+  
+  </div>
+	
 </div>
 

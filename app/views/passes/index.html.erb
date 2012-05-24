@@ -1,7 +1,8 @@
 <%= stylesheet_link_tag "passes", :media => "all" %>
 
 <h1>StreamPass Index</h1>
-<p>Available Passes Below:</p>
+
+<p>Sort By: Latest | Popular</p>
 
 <% @passes.each do |pass| %>
 
@@ -11,7 +12,7 @@
 	
     <h4><%= pass.title %></h4>
   	<p><%= pass.description %></p>
-  	<p><b>Vendor:</b> <%= pass.vendor.email %></p>
+  	<p><a href="/vendors/<%= pass.vendor.id %>"><%= pass.vendor.email %></p>
 
 	</div>
 	
@@ -22,3 +23,5 @@
 </div>
 
 <% end %>
+
+<p>View Next 10...</p>

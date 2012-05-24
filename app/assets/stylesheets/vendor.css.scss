@@ -31,22 +31,29 @@ h3 {
 
 img {
 float: left;
-margin-top: 5px;
-margin-left: 5px;
+margin: 5px;
 }
 
 .lefthalf {
 	float: left;
-	width: 300px;
+	width: 350px;
+	height: 800px;
+	margin-left: 15px;
+	border: 1px solid red;
+	padding: 10px;
 }
 
 .righthalf {
 	float: left;
-	width: 600px;
+	width: 520px;
+	height: 800px;
+	margin-left: 15px;
+	border: 1px solid red;
+	padding: 10px;
 }
 
 .passcontainer {
-  width: 400px;
+  width: 500px;
   height: 120px;
 	background: white url('arrow-right.jpeg') 100% no-repeat;
   font-size: 15px;
@@ -70,6 +77,7 @@ margin-left: 5px;
 
 .passcontent p {
 	margin: 10px 5px;
+	font-size: 12px;
 }
 
 .buypass p {

@@ -12,6 +12,10 @@
 	padding: 5px;
 }
 
+h1 , p {
+	margin-left: 25px;
+}
+
 .passcontent {
 	width: 700px;
 	margin: 1px;
@@ -39,3 +43,85 @@
 	margin-top: 35px;
 	margin-left: 15px;
 }
+
+.pass {
+	text-align: center;
+}
+
+.video {
+	padding: 5px;
+}
+
+.share {
+	width: 560px;
+	height: 50px;
+	margin: 0px auto;
+	padding: 5px;
+}
+
+.share p {
+	float: left;
+	display: inline;
+	margin-top: -5px;
+	margin-left: 40px;
+}
+
+.share a , .share iframe {
+	float: right;
+	margin-top: -5px;
+	margin-right: 10px;
+}
+
+
+.rating-cancel , .star-rating {
+	float:left;
+	width:17px;
+	height:15px;
+	text-indent:-999em;
+	cursor:pointer;
+	display:block;
+	background:transparent;
+	overflow:hidden;
+	}
+	
+.rating-cancel , .rating-cancel a {
+	background:url(delete.gif) no-repeat 0 -16px;
+	}
+	
+.star , .star a {
+	background:url(star.gif) no-repeat 0 0px;
+	}
+
+.rating-cancel a , .star-rating a { 
+	display:block;
+	width:16px;
+	height:100%;
+	background-position:0 0px;
+	border:0
+	}
+	
+.star-rating-on a {
+	background-position:0 -16px!important;
+	}
+	
+.star-rating-hover a {
+	background-position:0 -32px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

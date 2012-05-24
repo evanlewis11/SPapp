@@ -22,7 +22,7 @@ passes = Pass.create([ {title: 'Code Academy Music Video', description: 'Lorem i
   {title: 'Code Academy Sports Video', description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.', embed_code: 'http://youtu.be/Ck4wAQQcy0k', vendor_id: Vendor.find_by_email("evanpatricklewis@gmail.com").id, price: 2},
   {title: 'Code Academy Education Video', description: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.', embed_code: 'http://youtu.be/Ck4wAQQcy0k', vendor_id: Vendor.find_by_email("jlgladf@gmail.com").id, price: 2}])
   
-puts "Development databaase ready for use."
+puts "Development database ready for use."
 
 else 
 
